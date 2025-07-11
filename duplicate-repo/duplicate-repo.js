@@ -23,7 +23,9 @@ const GITHUB_API = 'https://api.github.com/repos';
 const MILESTONES_TO_EXCLUDE = [];
 
 // 🚀 **Milestones to include** (Set to ['*'] to include all except exclusions)
-const MILESTONES_TO_INCLUDE = ['*']; // Example: ['Milestone A', 'Milestone B']
+const MILESTONES_TO_INCLUDE = ['1. Learn about Focus Bear and set your goals', '0. Company policies']; // Example: ['Milestone A', 'Milestone B']
+
+const ISSUES_TO_INCLUDE = [7, 12]; // Example: [7, 12] to include specific issue numbers or ['*'] to include all issues
 
 async function fetchAllIssues(repo) {
   let issues = [];
@@ -109,6 +111,11 @@ async function copyIssues(milestoneMap, destRepo) {
     const existingIssueMap = new Map(existingIssues.map(issue => [issue.title, issue]));
 
     for (const issue of sourceIssues) {
+      if (ISSUES_TO_INCLUDE[0] !== '*' && !ISSUES_TO_INCLUDE.includes(issue.number)) {
+        console.log(`🚫 Skipping issue: ${issue.title} (Not in include list)`);
+        continue;
+      }
+
       if (issue.pull_request) continue; // Skip pull requests
 
       if (issue.milestone && MILESTONES_TO_EXCLUDE.includes(issue.milestone.title)) {
@@ -123,7 +130,8 @@ async function copyIssues(milestoneMap, destRepo) {
 
       if (existingIssueMap.has(issue.title)) {
         const existingIssue = existingIssueMap.get(issue.title);
-        if (existingIssue.body !== issue.body) {
+        const isBodyChanged = existingIssue.body !== issue.body || (issue.body && !existingIssue.body);
+        if (isBodyChanged) {
           console.log(`🔄 Updating body content for issue: ${issue.title}`);
           await axios.patch(`${GITHUB_API}/${destRepo}/issues/${existingIssue.number}`, {
             body: issue.body || '',
@@ -168,6 +176,7 @@ async function copyIssues(milestoneMap, destRepo) {
 async function duplicateRepo(destRepo) {
   console.log('🚀 Starting repository duplication...', destRepo);
   const milestoneMap = await copyMilestones(destRepo);
+  console.log('milestoneMap:', milestoneMap);
   await copyIssues(milestoneMap, destRepo);
   console.log('✅ Repository duplication completed successfully!');
 }
