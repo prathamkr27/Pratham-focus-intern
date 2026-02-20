@@ -5,6 +5,7 @@ the sceince backed ways focus bear helps in building focus  = 1 Removing Distrac
                                                               3 Eliminate Decision Fatigue
                                                               4 Use visual cues to increase focus
                                                               5 Increase Motivation
+
 Q2 What problem is Focus Bear solving?
 Ans2 focus bear is trying to boost productivity and focus , help reduce adhd symptoms , eleminates decision fatigue as well 
 
