@@ -13,4 +13,4 @@ saturday       uni library      variable (2-8hours)
 sunday          uni library  variable (2-8hours)
 
 
-As i am doing this intenrhship concurrently with my full time university course and also other part time work to make sure i am on top of my deadline i will try to 
+As i am doing this intenrhship concurrently with my full time university course and also other part time work to make sure i am on top of my deadline i will try to switch working days to complete the work 
