@@ -19,3 +19,14 @@ What are the main Agile ceremonies and their purpose
 How do Agile teams collaborate asynchronously and across time zones?
 
 To collaborate asynchronously across time zones, Agile teams fundamentally shift from real-time meetings to rigorous documentation and flexible communication. They replace live daily stand-ups with written updates in shared channels and record major ceremonies, like Sprint Reviews, for offline viewing. Success relies on writing highly detailed task tickets so team members can work independently without waiting hours for clarification, while reserving the narrow windows of overlapping time zones exclusively for complex, collaborative problem-solving rather than routine updates.
+
+
+How do Agile ceremonies help with communication and alignment?
+
+Agile ceremonies provide structured, predictable touchpoints that prevent technical silos and keep the team aligned on shared goals. For example, Daily Stand-ups act as an immediate communication loop; if my data pipeline is blocked because I need clarification on a JSON schema, I can align with QA and the Agile PM instantly rather than waiting days for a chat response. Sprint Planning ensures our technical tasks are strictly aligned with the broader product vision, guaranteeing my model optimization work directly supports the features we are shipping that cycle. Finally, Sprint Retrospectives provide a dedicated space to communicate about our workflow, allowing us to address bottlenecks and improve our collaboration processes for the next sprint.
+
+
+Which ceremony do you think is most important for your role, and why?
+
+For my role as a Data Engineer Intern, the Daily Stand-up is the most important Agile ceremony because it provides a rapid, guaranteed feedback loop. When working on complex technical tasks like LLM cost reduction or data pipeline optimization, it is incredibly easy to hit an unexpected technical blocker or realize I am missing context about a data schema. Instead of spinning my wheels for days trying to solve a problem in isolation, the stand-up gives me a dedicated daily window to flag blockers, ask senior engineers for guidance, and ensure my daily technical work remains perfectly aligned with the team's immediate priorities. It turns potential days of being stuck into a quick five-minute pivot.
+
