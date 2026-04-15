@@ -1,13 +1,17 @@
-When should you use AI for assistance, and when should you rely on your own skills?
 
-In my opinion AI tools should be used when you have prior knowledge of the topic or the issue so you can fact check the output , or if you dont have prior knowldege first you should ask AI to make you learn the basic then move on to the intial issue . Blindly copying AI answer can lead to massive issues it can break the website code .
+Identify one task you can improve using an AI tool, and try it out.
 
-How can you avoid over-reliance on AI while still benefiting from it?
+As a Data engineer intern, I will likely encounter legacy code or complicated SQL joins. I can paste confusing code into an AI to get a plain-English breakdown of what the data pipeline is doing step-by-step
 
-I think the step should be brainstorming on your own and writing down the key pointer you know , creating a draft version on your will also be beneficial . After this you have created a base for the work and now you can take help from AI without blindly trusting it using it smartly
+Review the AI-generated output critically—did it require editing or fact-checking?
 
-What steps will you take to ensure data privacy when using AI tools?
+I used an AI tool to generate a plain-English explanation of a complex SQL query containing multiple inner joins , which is used to extract data from our databases.
+The AI successfully broke down the syntax. It provided a clear, step-by-step summary of which tables were being connected and the basic filtering logic applied in the where clause.
+While the explanation was helpful for a high-level overview, I reviewed it critically and found it required editing and domain-specific fact-checking in two key areas:
+1 Fact-Checking Business Logic
+2 Editing for potenial data leak 
 
-Steps i will follow to ensure data privacy will be making sure i dont share any sensitive data with AI , like sensitive copany code ,user data , tokens , unique user ids. Finally i will optout audit so my chats are not used for further training 
+Document one best practice you will follow when using AI tools at Focus Bear.
 
-The best practice for using AI will be maintaing a content file as AI tend to forget data in case of longer more complex task
+Sanitizing Data and Stripping Personally Identifiable Information Before Prompting AI.
+Many public AI tools use the text you type into them to train future versions of their models. As a data engineer working on LLM optimization, I frequently work with raw datasets, error logs, and database schemas. If I paste a messy JSONL file into an AI to ask for help writing a text-cleaning script, I risk accidentally leaking sensitive user data into the public domain.
